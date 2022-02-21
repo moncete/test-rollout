@@ -1,0 +1,66 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: canary
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.replicas }}
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: test-canary
+  template:
+    metadata:
+      labels:
+        app: test-canary
+    spec:
+      containers:
+      - name: test
+        image: {{ .Values.imageName }}:{{ .Values.tag }}
+        env:
+        - name: PRUEBA
+          value: {{ .Values.env.PRUEBA}}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+  strategy:
+    canary:
+      stableService: prod
+      canaryService: canary
+      trafficRouting:
+        ambassador:
+          mappings:
+            - faspi
+      steps:
+      - setCanaryScale:
+          replicas: 2
+      - setWeight: 50
+      - pause: {}
+      
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: prod
+  namespace: {{ .Values.namespace }}
+spec:
+  selector:
+    app: test-canary
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: canary
+  namespace: {{ .Values.namespace }}
+spec:
+  selector:
+    app: test-canary
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
