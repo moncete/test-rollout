@@ -12,5 +12,5 @@ appVersion: 0.1.16
 dependencies:
   - name: blue-green
     repositotry: 'file:///charts/blue-green'
-  - name: canary
-    repositotry: 'file://.charts/canary'
+  #- name: canary
+  #  repositotry: 'file://.charts/canary'
