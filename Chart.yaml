@@ -1,0 +1,16 @@
+apiVersion: v2
+name: test-rollout
+description: A Helm chart for Kubernetes
+
+type: application
+
+version: 0.1.0
+
+
+appVersion: "0.0.1"
+
+dependencies:
+  - name: blue-green
+    repositotry: 'file:///charts/blue-green'
+  - name: canary
+    repositotry: 'file://.charts/canary'
