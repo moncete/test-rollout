@@ -13,5 +13,5 @@ dependencies:
   - name: blue-green
     repository: 'file://./charts/blue-green'
     version: 0.1.0
-  #- name: canary
-  #  repositotry: 'file://.charts/canary'
+  - name: canary
+    repositotry: 'file://./canary'
