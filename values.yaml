@@ -1,1 +1,2 @@
-namespace: test-helm
+global:
+  namespace: test-helm
