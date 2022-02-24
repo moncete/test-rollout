@@ -1,7 +1,0 @@
-replicas: 2
-
-image:
-  imageName: moncete/faspi
-  tag: 0.4
-env:
-  PRUEBA: "PIESLOCOS"
