@@ -1,5 +1,7 @@
 apiVersion: getambassador.io/v2
 kind: KubernetesEndpointResolver
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
   name: endpoint
   namespace: {{ $.Values.global.namespace }}
