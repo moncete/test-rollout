@@ -1,6 +1,8 @@
 apiVersion: getambassador.io/v2
 kind:  Mapping
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
   name:  faspi-auto
   namespace: {{ $.Values.global.namespace }}
 spec:
