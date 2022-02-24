@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: bluegreen
-  namespace: {{ $.Values.global.namespace }}
+  #namespace: {{ $.Values.global.namespace }}
 spec:
   replicas: {{ .Values.replicas }}
   revisionHistoryLimit: 2
@@ -43,7 +43,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: rollout-bluegreen-active
-  namespace: {{ $.Values.global.namespace }}
+  #namespace: {{ $.Values.global.namespace }}
 spec:
   selector:
     app: rollout-bluegreen
@@ -58,7 +58,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: rollout-bluegreen-preview
-  namespace: {{ $.Values.global.namespace }}
+  #namespace: {{ $.Values.global.namespace }}
 spec:
   selector:
     app: rollout-bluegreen
