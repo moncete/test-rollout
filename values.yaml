@@ -1,2 +1,8 @@
+blue-green:
+  enabled: false
+
+canary:
+  enabled: true
+
 global:
   namespace: testumbrella
