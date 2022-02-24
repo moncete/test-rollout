@@ -1,5 +1,5 @@
 blue-green:
-  enabled: false
+  enabled: true
 
 canary:
   enabled: true
