@@ -44,7 +44,7 @@ kind: Service
 apiVersion: v1
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
   name: prod
   namespace: {{ $.Values.global.namespace }}
 spec:
@@ -60,7 +60,7 @@ kind: Service
 apiVersion: v1
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
   name: canary
   namespace: {{ $.Values.global.namespace }}
 spec:
