@@ -1,0 +1,10 @@
+apiVersion: getambassador.io/v2
+kind:  Mapping
+metadata:
+  name:  faspi-auto
+  namespace: {{ $.Values.global.namespace }}
+spec:
+  resolver: endpoint
+  prefix: /umbrella
+  rewrite: /
+  service: prod:80
