@@ -5,4 +5,4 @@ canary:
   enabled: true
 
 global:
-  namespace: testumbrella
+  namespace: helmito-dev
