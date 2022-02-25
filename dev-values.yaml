@@ -1,1 +1,8 @@
-dfs
+blue-green:
+  enabled: true
+
+canary:
+  enabled: true
+
+global:
+  namespace: helmito-dev
