@@ -1,4 +1,4 @@
-{{ - $local := $.File.Get "dev-values.yaml" | fromYaml }} 
+{{ - $local := $.File.Get "../dev-values.yaml" | fromYaml }} 
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
