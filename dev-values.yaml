@@ -4,10 +4,8 @@ blue-green:
 canary:
   enabled: true
 
-env:
-  prueba: "VALORES"
 
 global:
   namespace: helmito-dev
   env:
-    prueba: "VALORES
+    prueba: VALORES
