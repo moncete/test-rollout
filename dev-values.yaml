@@ -7,5 +7,3 @@ canary:
 
 global:
   namespace: helmito-dev
-  env:
-    prueba: VALORES
