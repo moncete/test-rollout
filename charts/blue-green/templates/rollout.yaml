@@ -1,4 +1,4 @@
-{{- $v := $.Files.Get "dev-values.yaml" | fromYaml }}
+###{{- $v := $.Files.Get "dev-values.yaml" | fromYaml }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
@@ -70,4 +70,4 @@ spec:
     port: 80
     targetPort: 8080
   #type: LoadBalancer
-{{- end }}
+###{{- end }}
