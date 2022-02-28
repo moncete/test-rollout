@@ -21,7 +21,6 @@ spec:
         image: moncete/faspi:0.4
         env:
         - name: PRUEBA
-          
           value: "Pruebecita"
         imagePullPolicy: Always
         ports:
