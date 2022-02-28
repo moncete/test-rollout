@@ -1,4 +1,4 @@
-{{ - $local := $.File.Get "../dev-values.yaml" | fromYaml }} 
+{{ - $test := $.File.Get "dev-values.yaml" | fromYaml }} 
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
@@ -21,7 +21,7 @@ spec:
         image: moncete/faspi:0.4
         env:
         - name: PRUEBA
-          value: {{ $local.env.prueba | quote }}
+          value: {{ $test.env.prueba | quote }}
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
