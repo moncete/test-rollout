@@ -1,4 +1,4 @@
-{{- $a := $.Files.Get "test.yaml" | fromYaml }} 
+{{- $v := $.Files.Get "dev-values.yaml" | fromYaml }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
@@ -21,7 +21,7 @@ spec:
         image: moncete/faspi:0.4
         env:
         - name: PRUEBA
-          #####{{ $a.env.prueba | quote }}
+          #####{{ $v.env.prueba | quote }}
           value: "Pruebecita"
         imagePullPolicy: Always
         ports:
