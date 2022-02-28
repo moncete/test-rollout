@@ -1,4 +1,4 @@
-###{{- $v := $.Files.Get "dev-values.yaml" | fromYaml }}
+{{- $v := $.Files.Get "dev-values.yaml" | fromYaml }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
@@ -21,7 +21,7 @@ spec:
         image: moncete/faspi:0.4
         env:
         - name: PRUEBA
-          value: "Pruebecita"
+          value: {{ $v.env.prueba | quote }}
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -69,4 +69,4 @@ spec:
     port: 80
     targetPort: 8080
   #type: LoadBalancer
-###{{- end }}
+
