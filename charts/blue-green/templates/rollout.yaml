@@ -19,7 +19,7 @@ spec:
         image: moncete/faspi:0.4
         env:
         - name: PRUEBA
-          value: {{ .Values.env.PRUEBA | quote }} 
+          value: "CASITA"
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
