@@ -1,4 +1,4 @@
-{{ - $test := (.Files.Get "dev-values.yaml") | fromYaml }} 
+{{ - $test := .Files.Get "dev-values.yaml" | fromYaml }} 
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
