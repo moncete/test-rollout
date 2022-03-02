@@ -4,4 +4,5 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
   name: endpoint
-  namespace: {{ $.Values.global.namespace }}
+  #namespace: {{ $.Values.global.namespace }}
+  namespace: {{.Release.Namespace}}
