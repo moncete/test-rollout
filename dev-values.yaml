@@ -2,7 +2,7 @@ blue-green:
   enabled: true
 
 canary:
-  enabled: true
+  enabled: false
 
 
 global:
