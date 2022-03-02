@@ -5,4 +5,4 @@ canary:
   enabled: true
 
 global:
-  namespace: helmito-dev
+  namespace: {{.Release.Namespace}}
