@@ -4,7 +4,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
   name: test-canary
-  namespace: {{ $.Values.global.namespace }}
+  #namespace: {{ $.Values.global.namespace }}
+  namespace: {{.Release.Namespace}}
 spec:
   replicas: 2
   revisionHistoryLimit: 3
@@ -52,7 +53,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
   name: prod
-  namespace: {{ $.Values.global.namespace }}
+  #namespace: {{ $.Values.global.namespace }}
+  namespace: {{.Release.Namespace}}
 spec:
   selector:
     app: test-canary
@@ -68,7 +70,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
   name: canary
-  namespace: {{ $.Values.global.namespace }}
+  #namespace: {{ $.Values.global.namespace }}
+  namespace: {{.Release.Namespace}}
 spec:
   selector:
     app: test-canary
