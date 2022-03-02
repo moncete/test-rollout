@@ -4,7 +4,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
   name:  faspi-auto
-  namespace: {{ $.Values.global.namespace }}
+  #namespace: {{ $.Values.global.namespace }}
+  namespace: {{.Release.Namespace}}
 spec:
   resolver: endpoint
   prefix: /umbrella
