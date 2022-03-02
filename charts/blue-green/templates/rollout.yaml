@@ -46,7 +46,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: rollout-bluegreen-active
-  namespace: {{ $.Values.global.namespace }}
+  #namespace: {{ $.Values.global.namespace }}
+  namespace: {{.Release.Namespace}}
 spec:
   selector:
     app: rollout-bluegreen
@@ -61,7 +62,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: rollout-bluegreen-preview
-  namespace: {{ $.Values.global.namespace }}
+  #namespace: {{ $.Values.global.namespace }}
+  namespace: {{.Release.Namespace}}
 spec:
   selector:
     app: rollout-bluegreen
