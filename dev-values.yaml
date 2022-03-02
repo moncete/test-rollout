@@ -7,3 +7,4 @@ canary:
 
 global:
   namespace: helmito-dev
+  configFile: dev-values.yaml
