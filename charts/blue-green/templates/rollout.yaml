@@ -1,4 +1,4 @@
-{{- $v := $.Files.Get "dev-values.yaml" | fromYaml }}
+{{- $v := $.Files.Get $.Values.global.configFile | fromYaml }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
