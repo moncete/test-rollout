@@ -28,9 +28,11 @@ spec:
         - containerPort: 8080
         resources:
           requests:
-            cpu: "250m"
+            cpu: {{ $v.resources.request.cpu | quote }}
+            mem: {{ $v.resurces.request.mem | quote }}
           limits:
-            cpu: "500m"
+            cpu: {{ $v.resources.limit.cpu | quote }}
+            mem: {{ $v.resources.limit.mem | quote }}
   strategy:
     blueGreen: 
       # activeService specifies the service to update with the new template hash at time of promotion.
