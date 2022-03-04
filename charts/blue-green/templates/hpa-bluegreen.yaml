@@ -1,0 +1,15 @@
+{{- $v := $.Files.Get $.Values.global.configFile | fromYaml }}
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: hpa-rollout-bluegreen
+  namespace: {{ .Release.Namespace }}
+spec:
+  maxReplicas: {{ $v.autoescaler.max }}
+  minReplicas: {{ $v.autoescaler.min }}
+  scaleTargetRef:
+    apiVersion: argoproj.io/v1alpha1
+    kind: Rollout
+    name: rollout-bluegreen
+  targetCPUUtilizationPercentage: {{ $v.autoescaler.cpu }}
