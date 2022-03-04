@@ -8,3 +8,5 @@ resources:
   limit:
     mem: 128m
     cpu: 100m
+ autoescaler:
+   cpu: 50
