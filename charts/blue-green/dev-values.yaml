@@ -4,4 +4,4 @@
   autoescaler:
     max: 3
     min: 1
-    cpu: 60%
+    cpu: 60
