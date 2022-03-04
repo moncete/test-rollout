@@ -1,3 +1,10 @@
 replicas: 3
 env:
   prueba: PERRACOVAR1
+resources:
+  request:
+    mem: 64m
+    cpu: 50m
+  limit:
+    mem: 128m
+    cpu: 100m
