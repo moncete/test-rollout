@@ -1,7 +1,7 @@
   replicas: 3
   env:
     prueba: PERRACOVAR1
-  autoescale:
+  autoescaler:
     max: 3
     min: 1
     cpu: 60%
