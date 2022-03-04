@@ -29,7 +29,7 @@ spec:
         resources:
           requests:
             cpu: {{ $v.resources.request.cpu | quote }}
-            mem: {{ $v.resurces.request.mem | quote }}
+            mem: {{ $v.resources.request.mem | quote }}
           limits:
             cpu: {{ $v.resources.limit.cpu | quote }}
             mem: {{ $v.resources.limit.mem | quote }}
