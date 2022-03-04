@@ -22,7 +22,8 @@ spec:
         image: moncete/faspi:0.4
         env:
         - name: PRUEBA
-          value: {{ $v.env.prueba | quote }}
+          #value: {{ $v.env.prueba | quote }}
+          value: "PRUEBECITA"
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
