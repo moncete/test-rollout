@@ -1,0 +1,15 @@
+{{- $v := $.Files.Get $.Values.global.configFile | fromYaml }}
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: hpa-canary
+  namespace: {{ .Release.Namespace }}
+spec:
+  maxReplicas: {{ $v.autoescaler.max }}
+  minReplicas: {{ $v.autoescaler.min }}
+  scaleTargetRef:
+    apiVersion: argoproj.io/v1alpha1
+    kind: Rollout
+    name: test-canary
+  targetCPUUtilizationPercentage: {{ $v.autoescaler.cpu }}
