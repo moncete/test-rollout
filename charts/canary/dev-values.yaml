@@ -1,0 +1,13 @@
+env:
+  prueba: PERRACOVAR12
+resources:
+  request:
+    mem: 64Mi
+    cpu: 100m
+  limit:
+    mem: 512Mi
+    cpu: 200m
+autoescaler:
+  cpu: 80
+  max: 3
+  min: 2
