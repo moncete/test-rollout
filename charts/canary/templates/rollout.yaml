@@ -28,13 +28,13 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-         resources:
-        requests:
-          cpu: {{ $v.resources.request.cpu | quote }}
-          memory: {{ $v.resources.request.mem | quote }}
-        limits:
-          cpu: {{ $v.resources.limit.cpu | quote }}
-          memory: {{ $v.resources.limit.mem | quote }}
+        resources:
+          requests:
+            cpu: {{ $v.resources.request.cpu | quote }}
+            memory: {{ $v.resources.request.mem | quote }}
+          limits:
+            cpu: {{ $v.resources.limit.cpu | quote }}
+            memory: {{ $v.resources.limit.mem | quote }}
   strategy:
     canary:
       stableService: prod
