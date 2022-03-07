@@ -1,6 +1,6 @@
 replicas: 3
 env:
-  prueba: PERRACOVAR12
+  prueba: PERRACOVAR25
 resources:
   request:
     mem: 64Mi
