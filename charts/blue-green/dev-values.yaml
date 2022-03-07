@@ -3,10 +3,10 @@ env:
   prueba: PERRACOVAR1
 resources:
   request:
-    mem: 64m
+    mem: 64Mi
     cpu: 100m
   limit:
-    mem: 256m
+    mem: 512Mi
     cpu: 200m
 autoescaler:
   cpu: 50
