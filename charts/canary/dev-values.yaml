@@ -1,5 +1,5 @@
 env:
-  prueba: PERRACOVAR12
+  prueba: WAVEWAVE
 resources:
   request:
     mem: 64Mi
