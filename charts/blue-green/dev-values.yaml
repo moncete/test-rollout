@@ -4,10 +4,10 @@ env:
 resources:
   request:
     mem: 64m
-    cpu: 50m
+    cpu: 50mi
   limit:
     mem: 128m
-    cpu: 100m
+    cpu: 100mi
 autoescaler:
   cpu: 50
   max: 3
