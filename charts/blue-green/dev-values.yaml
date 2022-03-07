@@ -9,6 +9,6 @@ resources:
     mem: 512Mi
     cpu: 200m
 autoescaler:
-  cpu: 50
+  cpu: 80
   max: 3
   min: 1
