@@ -1,5 +1,5 @@
 env:
-  prueba: WAVEWAVE
+  prueba: WAVEWAVE21
 resources:
   request:
     mem: 64Mi
