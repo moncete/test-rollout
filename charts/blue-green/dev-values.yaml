@@ -6,7 +6,7 @@ resources:
     mem: 64m
     cpu: 50m
   limit:
-    mem: 128m
+    mem: 256m
     cpu: 100m
 autoescaler:
   cpu: 50
